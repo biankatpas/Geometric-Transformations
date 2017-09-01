@@ -21,9 +21,14 @@ public class GeometricTransformations extends javax.swing.JFrame
         t = new Transformation();
         br = new Bresenham();
 
-        points.add(new Point(20, 40));
+        /*points.add(new Point(20, 40));
         points.add(new Point(40, 40));
-        points.add(new Point(30, 60));
+        points.add(new Point(30, 60));*/
+        
+        points.add(new Point(180, 120));
+        points.add(new Point(180, 56));
+        points.add(new Point(259, 56));
+        points.add(new Point(259, 120));
 
         br.add(points);
 

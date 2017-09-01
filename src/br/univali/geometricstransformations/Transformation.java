@@ -50,19 +50,19 @@ public class Transformation
         Point centerPoint;
 
         centerPoint = getCentroid(points);
-        auxPoints = coordMenosPontoCentral(points, centerPoint);
+        auxPoints = subCentroid(points, centerPoint);
 
         for (int i = 0; i < auxPoints.size(); i++)
         {
             newPoints.add(new Point(auxPoints.get(i).x * newPoint.x, auxPoints.get(i).y * newPoint.y));
         }
 
-        finalPoints = coordMaisPontoCentral(newPoints, centerPoint);
+        finalPoints = addCentroid(newPoints, centerPoint);
 
         return finalPoints;
     }
 
-    private ArrayList<Point> coordMenosPontoCentral(ArrayList<Point> points, Point centroid)
+    private ArrayList<Point> subCentroid(ArrayList<Point> points, Point centroid)
     {
         ArrayList<Point> newPoints = new ArrayList<>();
         for (int i = 0; i < points.size(); i++)
@@ -72,7 +72,7 @@ public class Transformation
         return newPoints;
     }
 
-    private ArrayList<Point> coordMaisPontoCentral(ArrayList<Point> points, Point centroid)
+    private ArrayList<Point> addCentroid(ArrayList<Point> points, Point centroid)
     {
         ArrayList<Point> newPoints = new ArrayList<>();
         for (int i = 0; i < points.size(); i++)
