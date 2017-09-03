@@ -10,18 +10,18 @@ import java.util.ArrayList;
 public class Transformation
 {
 
-    public ArrayList<Point> rotation(float ang, ArrayList<Point> pontos)
+    public ArrayList<Point> rotation(float ang, ArrayList<Point> points)
     {
         double rad = Math.toRadians(ang);
         double cos = Math.cos(rad);
         double sin = Math.sin(rad);
-        Point centroid = getCentroid(pontos);
+        Point centroid = getCentroid(points);
         ArrayList<Point> aux = new ArrayList<>();
 
-        for (Point ponto : pontos)
+        for (Point point : points)
         {
-            double dx = ponto.x - centroid.x;
-            double dy = ponto.y - centroid.y;
+            double dx = point.x - centroid.x;
+            double dy = point.y - centroid.y;
 
             aux.add(new Point(
                     (int) (cos * dx - sin * dy + centroid.x),
