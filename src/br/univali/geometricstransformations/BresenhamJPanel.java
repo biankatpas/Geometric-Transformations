@@ -69,7 +69,7 @@ class BresenhamPanel extends JPanel
     public BresenhamPanel(ArrayList<Point> newPoints)
     {
         this.newPoints = newPoints;
-        
+
         int w = 600;
         int h = 500;
 
@@ -78,7 +78,7 @@ class BresenhamPanel extends JPanel
 
         setPreferredSize(new Dimension(w, h));
         setBackground(Color.white);
-        
+
         printPoints();
     }
 
@@ -87,13 +87,12 @@ class BresenhamPanel extends JPanel
         System.out.println("pts");
         for (Point newPoint : newPoints)
         {
-            System.out.println("["+newPoint.x+","+newPoint.y+"]");
+            System.out.println("[" + newPoint.x + "," + newPoint.y + "]");
         }
     }
 
     @Override
-    public void paintComponent(Graphics g
-    )
+    public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
 
